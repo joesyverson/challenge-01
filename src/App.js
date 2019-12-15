@@ -2,7 +2,8 @@ import React from 'react';
 import { GoogleMap, withScriptjs, withGoogleMap } from 'react-google-maps';
 
 
-function Map() {
+function Map(props) {
+	console.log(props.breweries)
 	return (
 		<GoogleMap
 		defaultZoom={11}
@@ -39,6 +40,7 @@ class App extends React.Component {
 	  	loadingElement={<div style={{height: "100%"}}/>}
 	  	containerElement={<div style={{height: "100%"}}/>}
 	  	mapElement={<div style={{height: "100%"}}/>}
+	  	breweries={this.state.breweries}
 	  	/>
 	  </div>
 	);
