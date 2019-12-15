@@ -9,8 +9,27 @@ function Map(props) {
 		defaultZoom={11}
 		defaultCenter={{lat: 36.169941, lng: -115.139832}}
 		>
-		{props.breweries.map((brewery) => brewery.latitude  ? <Marker key={brewery.id} position={{lat: parseFloat(brewery.latitude), lng: parseFloat(brewery.longitude)}} onClick={() => setSelBrew(brewery)}/> : null)}
-		{selectedBrew && <InfoWindow position={{lat: parseFloat(selectedBrew.latitude), lng: parseFloat(selectedBrew.longitude)}} onCloseClick={() => setSelBrew(null)}><div>details</div></InfoWindow>}
+		{props.breweries.map((brewery) => (
+			brewery.latitude  ?
+				<Marker
+				key={brewery.id}
+				position={{lat: parseFloat(brewery.latitude), lng: parseFloat(brewery.longitude)}}
+				onClick={() => setSelBrew(brewery)}
+				/>
+			:
+				null)
+		)}
+		{selectedBrew && (
+			<InfoWindow
+			position={{lat: parseFloat(selectedBrew.latitude), lng: parseFloat(selectedBrew.longitude)}}
+			onCloseClick={() => setSelBrew(null)}
+			>
+				<div>
+					<h3>{selectedBrew.name}</h3>
+					<p>{selectedBrew.street + " " + selectedBrew.postal_code}</p>
+				</div>
+			</InfoWindow>
+		)}
 		</GoogleMap>
 		);	
 }
