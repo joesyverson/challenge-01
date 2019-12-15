@@ -1,6 +1,5 @@
 import React from 'react';
-import { GoogleMap, withScriptjs, withGoogleMap } from 'react-google-maps';
-
+import { GoogleMap, withScriptjs, withGoogleMap, Marker } from 'react-google-maps';
 
 function Map(props) {
 	console.log(props.breweries)
@@ -8,9 +7,13 @@ function Map(props) {
 		<GoogleMap
 		defaultZoom={11}
 		defaultCenter={{lat: 36.169941, lng: -115.139832}}
-		/>
+		>
+		{props.breweries.map((brewery) => brewery.latitude  ? <Marker key={brewery.id} position={{lat: parseFloat(brewery.latitude), lng: parseFloat(brewery.longitude)}}/> : null)}
+		</GoogleMap>
 		);	
 }
+
+// <Marker key={brewery.id} position={{lat: brewery.latitude, lng: brewery.longitude}}/>
 
 const WrappedMap = withScriptjs(withGoogleMap(Map));
 
