@@ -1,26 +1,25 @@
 import React from 'react';
-import { GoogleMap, withScriptjs, withGoogleMap, Marker } from 'react-google-maps';
+import { GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow } from 'react-google-maps';
 
 function Map(props) {
-	console.log(props.breweries)
+	const [selectedBrew, setSelBrew] = React.useState(null);
+	console.log(props.breweries);
 	return (
 		<GoogleMap
 		defaultZoom={11}
 		defaultCenter={{lat: 36.169941, lng: -115.139832}}
 		>
-		{props.breweries.map((brewery) => brewery.latitude  ? <Marker key={brewery.id} position={{lat: parseFloat(brewery.latitude), lng: parseFloat(brewery.longitude)}}/> : null)}
+		{props.breweries.map((brewery) => brewery.latitude  ? <Marker key={brewery.id} position={{lat: parseFloat(brewery.latitude), lng: parseFloat(brewery.longitude)}} onClick={() => setSelBrew(brewery)}/> : null)}
+		{selectedBrew && <InfoWindow position={{lat: parseFloat(selectedBrew.latitude), lng: parseFloat(selectedBrew.longitude)}} onCloseClick={() => setSelBrew(null)}><div>details</div></InfoWindow>}
 		</GoogleMap>
 		);	
 }
 
-// <Marker key={brewery.id} position={{lat: brewery.latitude, lng: brewery.longitude}}/>
 
 const WrappedMap = withScriptjs(withGoogleMap(Map));
 
 class App extends React.Component {
 	state = {breweries: []}
-
-	// ----- MAP CONFIG ----- \\
 	
 	// ----- FETCHES ----- \\
 
@@ -32,7 +31,7 @@ class App extends React.Component {
 	// ----- LIFECYCLE ----- \\
 
 	componentDidMount() {
-		this.fetchData()
+		this.fetchData();
 	}
 
 	render() {
