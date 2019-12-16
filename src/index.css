@@ -2,13 +2,13 @@ body {
   margin: 0;
 }
 
-.column {
-	display: inline;
-	float: left;
-	width: 25vw;
-	height: 100vh;
+#main {
+	display: flex;
 }
 
-.column-item {
-	width: 100%;
+#column {
+	max-height: 100vh;
+	max-width: 25vw;
+	overflow: scroll;
+	padding-left: 1vw;
 }

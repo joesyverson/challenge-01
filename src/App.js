@@ -1,6 +1,9 @@
 import React from 'react';
 import { GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow } from 'react-google-maps';
 
+import Container from './Container.js';
+
+
 function Map(props) {
 	const [selectedBrew, setSelBrew] = React.useState(null);
 	console.log(props.breweries);
@@ -56,9 +59,10 @@ class App extends React.Component {
 
 	render() {
 	return (
-		<div>
-			<div className="column">
-				<h2 className="column-item">Breweries Las Vegas</h2>
+		<div id="main">
+			<div id="column">
+				<h2>Breweries Las Vegas</h2>
+				<Container breweries={this.state.breweries}/>
 			</div>
 			<div style={{width: '75vw', height: "100vh", display: "inline", float: "right"}}>
 				<WrappedMap
