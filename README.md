@@ -9,7 +9,7 @@
 *Card detail (show)*
 	<!-- - Name -->
 	<!-- 	- Address -->
-	- Map (Google Map React)
+	<!-- - Map (Google Map React) -->
 
 *Add*
 	- Navigate back and forth from list to item on list
