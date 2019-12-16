@@ -21,10 +21,10 @@ function Map(props) {
 				null)
 		)}
 
-		{props.selectedBrewery ? (
+		{Object.keys(props.selectedBrewery).length > 0 ? (
 			<InfoWindow
 			position={{lat: parseFloat(props.selectedBrewery.latitude), lng: parseFloat(props.selectedBrewery.longitude)}}
-			onCloseClick={() => props.selectBrewery(null)}
+			onCloseClick={() => props.selectBrewery({})}
 			>
 				<div>
 					<h3>{props.selectedBrewery.name}</h3>
@@ -32,7 +32,8 @@ function Map(props) {
 				</div>
 			</InfoWindow>
 			)
-			: null
+			:
+				null
 		}
 
 
@@ -43,15 +44,3 @@ function Map(props) {
 const WrappedMap = withScriptjs(withGoogleMap(Map));
 
 export default WrappedMap;
-
-// {selectedBrew && (
-// 			<InfoWindow
-// 			position={{lat: parseFloat(selectedBrew.latitude), lng: parseFloat(selectedBrew.longitude)}}
-// 			onCloseClick={() => setSelBrew(null)}
-// 			>
-// 				<div>
-// 					<h3>{selectedBrew.name}</h3>
-// 					<p>{selectedBrew.street + " " + selectedBrew.postal_code}</p>
-// 				</div>
-// 			</InfoWindow>
-// )}
