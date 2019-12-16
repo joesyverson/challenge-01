@@ -1,46 +1,8 @@
 import React from 'react';
-import { GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow } from 'react-google-maps';
 
 import Container from './Container.js';
 import Banner from './Banner.js';
-
-
-function Map(props) {
-	const [selectedBrew, setSelBrew] = React.useState(null);
-	console.log(props.breweries);
-	return (
-		<GoogleMap
-		defaultZoom={11}
-		defaultCenter={{lat: 36.169941, lng: -115.139832}}
-		>
-		{props.breweries.map((brewery) => (
-			brewery.latitude  ?
-				<Marker
-				key={brewery.id}
-				position={{lat: parseFloat(brewery.latitude), lng: parseFloat(brewery.longitude)}}
-				onClick={() => setSelBrew(brewery)}
-				icon={{url: '/beer-marker.svg', scaledSize: new window.google.maps.Size(25, 25)}}
-				/>
-			:
-				null)
-		)}
-		{selectedBrew && (
-			<InfoWindow
-			position={{lat: parseFloat(selectedBrew.latitude), lng: parseFloat(selectedBrew.longitude)}}
-			onCloseClick={() => setSelBrew(null)}
-			>
-				<div>
-					<h3>{selectedBrew.name}</h3>
-					<p>{selectedBrew.street + " " + selectedBrew.postal_code}</p>
-				</div>
-			</InfoWindow>
-		)}
-		</GoogleMap>
-		);	
-}
-
-
-const WrappedMap = withScriptjs(withGoogleMap(Map));
+import WrappedMap from './WrappedMap.js';
 
 class App extends React.Component {
 	state = {breweries: []}
@@ -51,6 +13,14 @@ class App extends React.Component {
     	fetch('https://api.openbrewerydb.org/breweries?by_city=las_vegas')
     	.then((res) => res.json()).then((json) => this.setState({breweries: json}));
   	}
+
+
+
+	// ----- LIFECYCLE ----- \\
+	
+	showOnMap = (data) => {
+		console.log(data);
+	}
 
 	// ----- LIFECYCLE ----- \\
 
@@ -63,7 +33,7 @@ class App extends React.Component {
 		<div id="main">
 			<div id="column">
 				<Banner/>
-				<Container breweries={this.state.breweries}/>
+				<Container breweries={this.state.breweries} handleClick={this.showOnMap}/>
 			</div>
 			<div style={{width: '75vw', height: "100vh", display: "inline", float: "right"}}>
 				<WrappedMap
