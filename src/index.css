@@ -10,5 +10,9 @@ body {
 	max-height: 100vh;
 	max-width: 25vw;
 	overflow: scroll;
-	padding-left: 1vw;
+	padding: 0 1vw 0 1vw;
+}
+
+#banner {
+	text-align: center;
 }

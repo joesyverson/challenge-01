@@ -2,6 +2,7 @@ import React from 'react';
 import { GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow } from 'react-google-maps';
 
 import Container from './Container.js';
+import Banner from './Banner.js';
 
 
 function Map(props) {
@@ -61,7 +62,7 @@ class App extends React.Component {
 	return (
 		<div id="main">
 			<div id="column">
-				<h2>Breweries Las Vegas</h2>
+				<Banner/>
 				<Container breweries={this.state.breweries}/>
 			</div>
 			<div style={{width: '75vw', height: "100vh", display: "inline", float: "right"}}>
