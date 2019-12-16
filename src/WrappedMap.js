@@ -14,7 +14,7 @@ function Map(props) {
 				<Marker
 				key={brewery.id}
 				position={{lat: parseFloat(brewery.latitude), lng: parseFloat(brewery.longitude)}}
-				onClick={() => setSelBrew(brewery)}
+				onClick={() => props.selectBrewery(brewery)}
 				icon={{url: '/beer-marker.svg', scaledSize: new window.google.maps.Size(25, 25)}}
 				/>
 			:
@@ -24,7 +24,7 @@ function Map(props) {
 		{props.selectedBrewery ? (
 			<InfoWindow
 			position={{lat: parseFloat(props.selectedBrewery.latitude), lng: parseFloat(props.selectedBrewery.longitude)}}
-			onCloseClick={() => setSelBrew(null)}
+			onCloseClick={() => props.selectBrewery(null)}
 			>
 				<div>
 					<h3>{props.selectedBrewery.name}</h3>
@@ -35,7 +35,7 @@ function Map(props) {
 			: null
 		}
 
-		
+
 		</GoogleMap>
 		);	
 }

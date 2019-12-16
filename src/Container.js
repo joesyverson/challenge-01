@@ -4,11 +4,11 @@ import Card from './Card.js';
 class Container extends React.Component {
 
 	formatCards = () => {
-		return this.props.breweries.map((brewery) => brewery.latitude ? <Card key={brewery.id} data={brewery} handleClick={this.props.handleClick}/> : null);
+		return this.props.breweries.map((brewery) => brewery.latitude ? <Card key={brewery.id} data={brewery} selectBrewery={this.props.selectBrewery}/> : null);
 	}
 
 	render() {
-		// console.log(this.props.handleClick);
+		// console.log(this.props.selectBrewery);
 		return (
 				<div>{this.formatCards()}</div>
 			);

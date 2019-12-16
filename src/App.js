@@ -21,7 +21,7 @@ class App extends React.Component {
 
 	// ----- LISTENER CALLBACKS ----- \\
 	
-	showOnMap = (brewery) => {
+	selectBrewery = (brewery) => {
 		this.setState({
 			breweries: this.state.breweries,
 			selectedBrewery: brewery
@@ -39,7 +39,7 @@ class App extends React.Component {
 		<div id="main">
 			<div id="column">
 				<Banner/>
-				<Container breweries={this.state.breweries} handleClick={this.showOnMap}/>
+				<Container breweries={this.state.breweries} selectBrewery={this.selectBrewery}/>
 			</div>
 			<div style={{width: '75vw', height: "100vh", display: "inline", float: "right"}}>
 				<WrappedMap
@@ -49,6 +49,7 @@ class App extends React.Component {
 				mapElement={<div style={{height: "100%"}}/>}
 				breweries={this.state.breweries}
 				selectedBrewery={this.state.selectedBrewery}
+				selectBrewery={this.selectBrewery}
 				/>
 			</div>
 		</div>
