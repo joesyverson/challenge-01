@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Card = (props) => {
-	console.log(props.handleClick)
+	// console.log(props.handleClick)
 	return(
 			<div>
 				<h3><a href={props.data.website_url}>{props.data.name}</a></h3>

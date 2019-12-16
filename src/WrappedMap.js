@@ -3,7 +3,7 @@ import { GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow } from 'reac
 
 function Map(props) {
 	const [selectedBrew, setSelBrew] = React.useState(null);
-	console.log(props.breweries);
+	console.log(props.selectedBrewery);
 	return (
 		<GoogleMap
 		defaultZoom={11}
@@ -20,22 +20,38 @@ function Map(props) {
 			:
 				null)
 		)}
-		{selectedBrew && (
+
+		{props.selectedBrewery ? (
 			<InfoWindow
-			position={{lat: parseFloat(selectedBrew.latitude), lng: parseFloat(selectedBrew.longitude)}}
+			position={{lat: parseFloat(props.selectedBrewery.latitude), lng: parseFloat(props.selectedBrewery.longitude)}}
 			onCloseClick={() => setSelBrew(null)}
 			>
 				<div>
-					<h3>{selectedBrew.name}</h3>
-					<p>{selectedBrew.street + " " + selectedBrew.postal_code}</p>
+					<h3>{props.selectedBrewery.name}</h3>
+					<p>{props.selectedBrewery.street + " " + props.selectedBrewery.postal_code}</p>
 				</div>
 			</InfoWindow>
-		)}
+			)
+			: null
+		}
+
+		
 		</GoogleMap>
 		);	
 }
 
-
 const WrappedMap = withScriptjs(withGoogleMap(Map));
 
 export default WrappedMap;
+
+// {selectedBrew && (
+// 			<InfoWindow
+// 			position={{lat: parseFloat(selectedBrew.latitude), lng: parseFloat(selectedBrew.longitude)}}
+// 			onCloseClick={() => setSelBrew(null)}
+// 			>
+// 				<div>
+// 					<h3>{selectedBrew.name}</h3>
+// 					<p>{selectedBrew.street + " " + selectedBrew.postal_code}</p>
+// 				</div>
+// 			</InfoWindow>
+// )}

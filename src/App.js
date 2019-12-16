@@ -5,7 +5,10 @@ import Banner from './Banner.js';
 import WrappedMap from './WrappedMap.js';
 
 class App extends React.Component {
-	state = {breweries: []}
+	state = {
+		breweries: [],
+		selectedBrewery: {}
+	}
 	
 	// ----- FETCHES ----- \\
 
@@ -16,10 +19,13 @@ class App extends React.Component {
 
 
 
-	// ----- LIFECYCLE ----- \\
+	// ----- LISTENER CALLBACKS ----- \\
 	
-	showOnMap = (data) => {
-		console.log(data);
+	showOnMap = (brewery) => {
+		this.setState({
+			breweries: this.state.breweries,
+			selectedBrewery: brewery
+		});
 	}
 
 	// ----- LIFECYCLE ----- \\
@@ -42,6 +48,7 @@ class App extends React.Component {
 				containerElement={<div style={{height: "100%"}}/>}
 				mapElement={<div style={{height: "100%"}}/>}
 				breweries={this.state.breweries}
+				selectedBrewery={this.state.selectedBrewery}
 				/>
 			</div>
 		</div>
