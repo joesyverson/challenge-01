@@ -1,5 +1,6 @@
 import React from 'react';
 import { GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow } from 'react-google-maps';
+import mapStyles from './mapStyles.js';
 
 function Map(props) {
 	const [selectedBrew, setSelBrew] = React.useState(null);
@@ -8,6 +9,7 @@ function Map(props) {
 		<GoogleMap
 		defaultZoom={11}
 		defaultCenter={{lat: 36.169941, lng: -115.139832}}
+		defaultOptions={{styles: mapStyles}}
 		>
 		{props.breweries.map((brewery) => (
 			brewery.latitude  ?
