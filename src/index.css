@@ -1,18 +1,136 @@
 body {
   margin: 0;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+a {
+	color: RGB(75, 112, 175);
+	text-decoration: none;
+	font-weight: 100;
+}
+
+a:hover {
+	color: RGB(186, 53, 60);
+}
+
+a:focus {
+	outline: none;
+}
+
+button {
+	color: white;
+	background-color: RGB(186, 53, 60);
+	border: none;
+	padding: 1.5vh;
+}
+
+button:hover {
+	background-color: RGB(75, 112, 175);
+	/*background-color: RGB(253, 248, 227);*/
+}
+
+h3 {
+	margin-bottom: 0.4vh;
+}
+
+.gm-style-iw.gm-style-iw-c {
+	background-color: RGB(253, 248, 227);
+	box-sizing: initial;
+	padding: 3vw;
+	border-radius: 0;
+}
+
+.gm-style-iw-d {
+	/*color: white;*/
+	background-color: RGB(253, 248, 227);
+	border: 0.5em;
+	border-style: double;
+	border-color: RGB(186, 53, 60);
+	padding: 2vw;
+	text-align: center;
+	font-family: 'Lexend Deca', sans-serif;
+}
+
+#gm-style {
+	font-family: 'Lexend Deca', sans-serif;
+	/*font: 'Lexend Deca', sans-serif;*/
+}
+.gm-style .gm-style-iw-t {
+	background-color: black;
+}
+
+.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom {
+	font-family: 'Lexend Deca', sans-serif;
+}
+
+.address {
+	margin: 0 0 0 0;
 }
 
 #main {
 	display: flex;
 }
 
+#banner {
+	text-align: center;
+	background-color: RGB(253, 248, 227);
+	padding: 1vh;
+	margin-top: 1vw;
+	margin-bottom: 2.25vw;
+}
+
+#banner-01 {
+	font-family: 'Yellowtail', cursive;
+	font-weight: normal;
+	font-size: 3vw;
+	
+	color: RGB(75, 112, 175);
+
+	margin-top: 0.35em;
+	margin-bottom: 0.0em;
+}
+
+#banner-02 {
+	font-family: 'Lexend Deca', sans-serif;
+	font-weight: bold;
+	font-size: 3vw;
+
+	display: flex;
+	justify-content: space-between;
+	color: RGB(186, 53, 60);
+
+	margin-top: 0.0em;
+	margin-bottom: 0.35em;
+}
+
+
 #column {
 	max-height: 100vh;
 	max-width: 25vw;
-	overflow: scroll;
-	padding: 0 1vw 0 1vw;
+	overflow-y: scroll;
+	scrollbar-color: RGB(186, 53, 60) RGBA(0, 0, 0, 0);
+	padding: 0 1vw 0 2.5vw;
+	background-color: RGB(253, 248, 227);
+	border: 0.5em;
+	border-style: double;
+	border-color: RGB(186, 53, 60);
 }
 
-#banner {
+.card {
 	text-align: center;
+	margin-bottom: 5vh;
 }
+
+.brewery-type {
+	margin-top: 0vh;
+/*	margin-bottom: 
+*/	font-size: 0.75em;
+}
+
+/*#container {
+	background-color: white;
+}*/
+
+/*font-family: 'Yellowtail', cursive;
+
+font-family: 'Lexend Deca', sans-serif;*/

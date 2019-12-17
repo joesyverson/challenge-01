@@ -2,12 +2,12 @@ import React from 'react';
 
 const Card = (props) => {
 	// console.log(props.selectBrewery)
+
 	return(
-			<div>
-				<h3><a href={props.data.website_url}>{props.data.name}</a></h3>
-				<p>{props.data.brewery_type}</p>
-				<p>{props.data.street}</p>
-				<button onClick={() => props.selectBrewery(props.data)}>Show Location</button>
+			<div className="card">
+				<h3><a href={props.data.website_url}>{props.formatName(props.data.name)}</a></h3>
+				<p className="brewery-type">Brewery type: {props.data.brewery_type}</p>
+				<button onClick={() => props.selectBrewery(props.data)}>{props.data.street}</button>
 			</div>
 		);
 }

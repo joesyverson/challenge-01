@@ -17,7 +17,7 @@ function Map(props) {
 				key={brewery.id}
 				position={{lat: parseFloat(brewery.latitude), lng: parseFloat(brewery.longitude)}}
 				onClick={() => props.selectBrewery(brewery)}
-				icon={{url: '/beer-marker.svg', scaledSize: new window.google.maps.Size(25, 25)}}
+				icon={{url: '/beer-marker-mod.svg', scaledSize: new window.google.maps.Size(30, 30)}}
 				/>
 			:
 				null)
@@ -25,12 +25,15 @@ function Map(props) {
 
 		{Object.keys(props.selectedBrewery).length > 0 ? (
 			<InfoWindow
-			position={{lat: parseFloat(props.selectedBrewery.latitude), lng: parseFloat(props.selectedBrewery.longitude)}}
+			className="info-window"
+			position={{lat: parseFloat(props.selectedBrewery.latitude) + 0.02, lng: parseFloat(props.selectedBrewery.longitude)}}
 			onCloseClick={() => props.selectBrewery({})}
 			>
 				<div>
-					<h3>{props.selectedBrewery.name}</h3>
-					<p>{props.selectedBrewery.street + " " + props.selectedBrewery.postal_code}</p>
+					<p>{props.formatName(props.selectedBrewery.name)}</p>
+					<p className="address">{props.selectedBrewery.street}</p>
+					<p className="address">{props.selectedBrewery.city}, {props.selectedBrewery.state}</p>
+					<p className="address">{props.selectedBrewery.postal_code.substr(0, 5)}</p>
 				</div>
 			</InfoWindow>
 			)

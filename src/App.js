@@ -28,6 +28,11 @@ class App extends React.Component {
 		});
 	}
 
+	formatName = (name) => {
+		// console.log(name)
+		return name.includes("-") ? name.substr(0, name.indexOf("-")) : name;
+	}
+
 	// ----- LIFECYCLE ----- \\
 
 	componentDidMount() {
@@ -39,7 +44,7 @@ class App extends React.Component {
 		<div id="main">
 			<div id="column">
 				<Banner/>
-				<Container breweries={this.state.breweries} selectBrewery={this.selectBrewery}/>
+				<Container id="container" breweries={this.state.breweries} selectBrewery={this.selectBrewery} formatName={this.formatName}/>
 			</div>
 			<div style={{width: '75vw', height: "100vh", display: "inline", float: "right"}}>
 				<WrappedMap
@@ -50,6 +55,7 @@ class App extends React.Component {
 				breweries={this.state.breweries}
 				selectedBrewery={this.state.selectedBrewery}
 				selectBrewery={this.selectBrewery}
+				formatName={this.formatName}
 				/>
 			</div>
 		</div>
