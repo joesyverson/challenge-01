@@ -33,41 +33,14 @@ h3 {
 	margin-bottom: 0.4vh;
 }
 
-.gm-style-iw.gm-style-iw-c {
-	background-color: RGB(253, 248, 227);
-	box-sizing: initial;
-	padding: 3vw;
-	border-radius: 0;
-}
 
-.gm-style-iw-d {
-	/*color: white;*/
-	background-color: RGB(253, 248, 227);
-	border: 0.5em;
-	border-style: double;
-	border-color: RGB(186, 53, 60);
-	padding: 2vw;
-	text-align: center;
-	font-family: 'Lexend Deca', sans-serif;
-}
-
-#gm-style {
-	font-family: 'Lexend Deca', sans-serif;
-	/*font: 'Lexend Deca', sans-serif;*/
-}
-.gm-style .gm-style-iw-t {
-	background-color: black;
-}
-
-.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom {
-	font-family: 'Lexend Deca', sans-serif;
-}
 
 .address {
 	margin: 0 0 0 0;
 }
 
 #main {
+	font-family: 'Lexend Deca', sans-serif;
 	display: flex;
 }
 
@@ -91,7 +64,6 @@ h3 {
 }
 
 #banner-02 {
-	font-family: 'Lexend Deca', sans-serif;
 	font-weight: bold;
 	font-size: 3vw;
 
@@ -127,10 +99,29 @@ h3 {
 */	font-size: 0.75em;
 }
 
-/*#container {
-	background-color: white;
-}*/
+
+/* ----- MAP STYLES ----- */
+
+.gm-style-iw-t {
+	background-color: RGB(253, 248, 227);
+}
+
+.gm-style-iw.gm-style-iw-c {
+	background-color: RGB(253, 248, 227);
+	box-sizing: initial;
+	padding: 3vw;
+	border-radius: 0;
+}
+
+.gm-style-iw-d {
+	background-color: RGB(253, 248, 227);
+	border: 0.5em;
+	border-style: double;
+	border-color: RGB(186, 53, 60);
+	padding: 2vw;
+	text-align: center;
+	font-family: 'Lexend Deca', sans-serif;
+}
 
 /*font-family: 'Yellowtail', cursive;
-
 font-family: 'Lexend Deca', sans-serif;*/

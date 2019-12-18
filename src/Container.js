@@ -4,7 +4,7 @@ import Card from './Card.js';
 class Container extends React.Component {
 
 	formatCards = () => {
-		return this.props.breweries.map((brewery) => brewery.latitude ? <Card key={brewery.id} data={brewery} selectBrewery={this.props.selectBrewery} formatName={this.props.formatName}/> : null);
+		return this.props.breweries.map((brewery) => brewery.latitude ? <Card key={brewery.id} data={brewery} selectedBrewery={this.props.selectedBrewery} selectBrewery={this.props.selectBrewery} formatName={this.props.formatName}/> : null);
 	}
 
 	render() {

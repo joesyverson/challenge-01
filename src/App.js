@@ -44,7 +44,7 @@ class App extends React.Component {
 		<div id="main">
 			<div id="column">
 				<Banner/>
-				<Container id="container" breweries={this.state.breweries} selectBrewery={this.selectBrewery} formatName={this.formatName}/>
+				<Container id="container" breweries={this.state.breweries} selectedBrewery={this.state.selectedBrewery} selectBrewery={this.selectBrewery} formatName={this.formatName}/>
 			</div>
 			<div style={{width: '75vw', height: "100vh", display: "inline", float: "right"}}>
 				<WrappedMap

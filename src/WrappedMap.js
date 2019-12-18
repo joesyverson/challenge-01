@@ -3,8 +3,6 @@ import { GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow } from 'reac
 import mapStyles from './mapStyles.js';
 
 function Map(props) {
-	const [selectedBrew, setSelBrew] = React.useState(null);
-	console.log(props.selectedBrewery);
 	return (
 		<GoogleMap
 		defaultZoom={11}
