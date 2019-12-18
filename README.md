@@ -1,33 +1,5 @@
 # The Challenge
 
-Code challenge for cool company.
+Code challenge for cool company. Abandoned temporarily.
 
-![](./demo.gif)
-
-
-*Card*
-	<!-- - Name -->
-	<!-- - Type -->
-	<!-- - Address -->
-	<!-- - URL -->
-
-*Card detail (show)*
-	<!-- - Name -->
-	<!-- 	- Address -->
-	<!-- - Map (Google Map React) -->
-
-*Add*
-	<!-- - Navigate back and forth from list to item on list -->
-
-<!-- ================================================== -->
-
-*Stlye*
-	- Functionality / readability
-	- Bootstrap?
-
-<!-- ================================================== -->
-
-*Bonus*
-	- Sass
-	- Heroku
-	- Backend
+![](./public/demo.gif)
