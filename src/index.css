@@ -22,12 +22,17 @@ button {
 	background-color: RGB(186, 53, 60);
 	border: none;
 	padding: 1.5vh;
+	outline: none;
 }
 
 button:hover {
 	background-color: RGB(75, 112, 175);
-	/*background-color: RGB(253, 248, 227);*/
 }
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
 
 h3 {
 	margin-bottom: 0.4vh;
