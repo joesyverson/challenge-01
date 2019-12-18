@@ -33,7 +33,11 @@ h3 {
 	margin-bottom: 0.4vh;
 }
 
-
+.banner-img {
+	max-height: 10vh;
+	max-width: 10vh;
+	margin-bottom: 0vh;
+}
 
 .address {
 	margin: 0 0 0 0;
@@ -59,8 +63,10 @@ h3 {
 	
 	color: RGB(75, 112, 175);
 
-	margin-top: 0.35em;
+	margin-top: 0vh;
 	margin-bottom: 0.0em;
+
+	padding-top: 0vh;
 }
 
 #banner-02 {

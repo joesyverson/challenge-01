@@ -4,9 +4,6 @@ const Card = (props) => {
 	// console.log(props.selectBrewery)
 
 	function selectedBrewery() {
-		// debugger;
-		console.log("data", props.data)
-		console.log("selected", props.selectedBrewery)
 		return props.selectedBrewery === props.data ? {} : props.data
 	}
 
@@ -22,7 +19,5 @@ const Card = (props) => {
 			</div>
 		);
 }
-
-// <button onClick={() => props.loadMap()}>Map</button>
 
 export default Card;

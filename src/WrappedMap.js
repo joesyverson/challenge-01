@@ -15,7 +15,7 @@ function Map(props) {
 				key={brewery.id}
 				position={{lat: parseFloat(brewery.latitude), lng: parseFloat(brewery.longitude)}}
 				onClick={() => props.selectBrewery(brewery)}
-				icon={{url: '/beer-marker-mod.svg', scaledSize: new window.google.maps.Size(30, 30)}}
+				icon={{url: '/beer-marker-mod.svg', scaledSize: new window.google.maps.Size(35, 35)}}
 				/>
 			:
 				null)

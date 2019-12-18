@@ -3,7 +3,10 @@ import React from 'react';
 const Banner = () => {
 	return (
 		<div id="banner">
-			<h1 id="banner-01" >Breweries</h1>
+			<img className="banner-img" src="./beer-marker-mod-lite.svg"/>
+			<h1 id="banner-01">
+				Breweries
+			</h1>
 			<h1 id="banner-02">
 				<span>L</span>
 				<span>A</span>

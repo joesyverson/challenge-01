@@ -12,7 +12,7 @@
 	<!-- - Map (Google Map React) -->
 
 *Add*
-	- Navigate back and forth from list to item on list
+	<!-- - Navigate back and forth from list to item on list -->
 
 <!-- ================================================== -->
 
