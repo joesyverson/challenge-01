@@ -1,12 +1,12 @@
 body {
-  margin: 0;
   font-family: 'Lexend Deca', sans-serif;
+  margin: 0;
 }
 
 a {
 	color: RGB(75, 112, 175);
-	text-decoration: none;
 	font-weight: 100;
+	text-decoration: none;
 }
 
 a:hover {
@@ -18,11 +18,11 @@ a:focus {
 }
 
 button {
-	color: white;
 	background-color: RGB(186, 53, 60);
 	border: none;
-	padding: 1.5vh;
+	color: white;
 	outline: none;
+	padding: 1.5vh;
 }
 
 button:hover {
@@ -30,7 +30,7 @@ button:hover {
 }
 
 button::-moz-focus-inner {
-  border: 0;
+	border: 0;
 }
 
 
@@ -39,64 +39,13 @@ h3 {
 }
 
 .banner-img {
+	margin-bottom: 0vh;
 	max-height: 10vh;
 	max-width: 10vh;
-	margin-bottom: 0vh;
 }
 
 .address {
 	margin: 0 0 0 0;
-}
-
-#main {
-	font-family: 'Lexend Deca', sans-serif;
-	display: flex;
-}
-
-#banner {
-	text-align: center;
-	background-color: RGB(253, 248, 227);
-	padding: 1vh;
-	margin-top: 1vw;
-	margin-bottom: 2.25vw;
-}
-
-#banner-01 {
-	font-family: 'Yellowtail', cursive;
-	font-weight: normal;
-	font-size: 3vw;
-	
-	color: RGB(75, 112, 175);
-
-	margin-top: 0vh;
-	margin-bottom: 0.0em;
-
-	padding-top: 0vh;
-}
-
-#banner-02 {
-	font-weight: bold;
-	font-size: 3vw;
-
-	display: flex;
-	justify-content: space-between;
-	color: RGB(186, 53, 60);
-
-	margin-top: 0.0em;
-	margin-bottom: 0.35em;
-}
-
-
-#column {
-	max-height: 100vh;
-	max-width: 25vw;
-	overflow-y: scroll;
-	scrollbar-color: RGB(186, 53, 60) RGBA(0, 0, 0, 0);
-	padding: 0 1vw 0 2.5vw;
-	background-color: RGB(253, 248, 227);
-	border: 0.5em;
-	border-style: double;
-	border-color: RGB(186, 53, 60);
 }
 
 .card {
@@ -105,9 +54,8 @@ h3 {
 }
 
 .brewery-type {
+	font-size: 0.75em;
 	margin-top: 0vh;
-/*	margin-bottom: 
-*/	font-size: 0.75em;
 }
 
 
@@ -120,7 +68,7 @@ h3 {
 .gm-style-iw.gm-style-iw-c {
 	background-color: RGB(253, 248, 227);
 	box-sizing: initial;
-	padding: 3vw;
+	padding: 2vw;
 	border-radius: 0;
 }
 
@@ -133,6 +81,55 @@ h3 {
 	text-align: center;
 	font-family: 'Lexend Deca', sans-serif;
 }
+
+/* ---------- */
+
+#main {
+	display: flex;
+	font-family: 'Lexend Deca', sans-serif;
+}
+
+#banner {
+	background-color: RGB(253, 248, 227);
+	margin-bottom: 2.25vw;
+	margin-top: 1vw;
+	padding: 1vh;
+	text-align: center;
+}
+
+#banner-01 {
+	color: RGB(75, 112, 175);
+	font-family: 'Yellowtail', cursive;
+	font-size: 3vw;
+	font-weight: normal;
+	margin-bottom: 0.0em;
+	margin-top: 0vh;
+	padding-top: 0vh;
+}
+
+#banner-02 {
+	color: RGB(186, 53, 60);
+	display: flex;
+	font-size: 3vw;
+	font-weight: bold;
+	justify-content: space-between;
+	margin-bottom: 0.35em;
+	margin-top: 0.0em;
+}
+
+
+#column {
+	background-color: RGB(253, 248, 227);
+	border: 0.5em;
+	border-color: RGB(186, 53, 60);
+	border-style: double;
+	max-height: 100vh;
+	max-width: 25vw;
+	overflow-y: scroll;
+	padding: 0 1vw 0 2.5vw;
+	scrollbar-color: RGB(186, 53, 60) RGBA(0, 0, 0, 0);
+}
+
 
 /*font-family: 'Yellowtail', cursive;
 font-family: 'Lexend Deca', sans-serif;*/
