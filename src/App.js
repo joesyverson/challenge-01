@@ -48,7 +48,7 @@ class App extends React.Component {
 			</div>
 			<div style={{width: '75vw', height: "100vh", display: "inline", float: "right"}}>
 				<WrappedMap
-				googleMapURL={"https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyAKXQV1Q3X6HGxKS85QA0HWMz6024_1b8g"}
+				googleMapURL={"https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=INSERT_KEY_HERE"}
 				loadingElement={<div style={{height: "100%"}}/>}
 				containerElement={<div style={{height: "100%"}}/>}
 				mapElement={<div style={{height: "100%"}}/>}
